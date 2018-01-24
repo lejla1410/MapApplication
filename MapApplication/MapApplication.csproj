@@ -165,9 +165,9 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="JavaScriptConvert.cs" />
-    <Compile Include="Migrations\201801241433356_NowaBaza.cs" />
-    <Compile Include="Migrations\201801241433356_NowaBaza.Designer.cs">
-      <DependentUpon>201801241433356_NowaBaza.cs</DependentUpon>
+    <Compile Include="Migrations\201801241859474_NewPropeties.cs" />
+    <Compile Include="Migrations\201801241859474_NewPropeties.Designer.cs">
+      <DependentUpon>201801241859474_NewPropeties.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\City.cs" />
@@ -235,7 +235,11 @@
     <Content Include="Views\MapsDBs\Edit.cshtml" />
     <Content Include="Views\MapsDBs\Index.cshtml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201801241859474_NewPropeties.resx">
+      <DependentUpon>201801241859474_NewPropeties.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
   </ItemGroup>
@@ -248,11 +252,6 @@
   <ItemGroup>
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201801241433356_NowaBaza.resx">
-      <DependentUpon>201801241433356_NowaBaza.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

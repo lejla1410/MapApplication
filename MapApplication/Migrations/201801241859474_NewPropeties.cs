@@ -3,7 +3,7 @@ namespace MapApplication.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class NowaBaza : DbMigration
+    public partial class NewPropeties : DbMigration
     {
         public override void Up()
         {
@@ -25,6 +25,7 @@ namespace MapApplication.Migrations
                         Latitude = c.Double(nullable: false),
                         Longitude = c.Double(nullable: false),
                         City = c.String(maxLength: 50, unicode: false),
+                        MyImagesFile = c.String(),
                         CityData_Id = c.Int(),
                     })
                 .PrimaryKey(t => t.ID)
