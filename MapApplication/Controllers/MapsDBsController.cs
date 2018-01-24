@@ -13,7 +13,7 @@ namespace MapApplication.Controllers
 {
     public class MapsDBsController : Controller
     {
-        private MapsDBContext1 db = new MapsDBContext1();
+        private MapContext db = new MapContext();
 
         // GET: MapsDBs
         public ActionResult Index()
@@ -28,12 +28,12 @@ namespace MapApplication.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            AtractionDb mapsDB = db.AtractionDb.Find(id);
-            if (mapsDB == null)
+            AtractionDb atractionDb = db.AtractionDb.Find(id);
+            if (atractionDb == null)
             {
                 return HttpNotFound();
             }
-            return View(mapsDB);
+            return View(atractionDb);
         }
 
         // GET: MapsDBs/Create
@@ -47,16 +47,16 @@ namespace MapApplication.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,AtractionName,Latitude,Longitude,City")] AtractionDb mapsDB)
+        public ActionResult Create([Bind(Include = "ID,AtractionName,Latitude,Longitude,City")] AtractionDb atractionDb)
         {
             if (ModelState.IsValid)
             {
-                db.AtractionDb.Add(mapsDB);
+                db.AtractionDb.Add(atractionDb);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(mapsDB);
+            return View(atractionDb);
         }
 
         // GET: MapsDBs/Edit/5
@@ -66,12 +66,12 @@ namespace MapApplication.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            AtractionDb mapsDB = db.AtractionDb.Find(id);
-            if (mapsDB == null)
+            AtractionDb atractionDb = db.AtractionDb.Find(id);
+            if (atractionDb == null)
             {
                 return HttpNotFound();
             }
-            return View(mapsDB);
+            return View(atractionDb);
         }
 
         // POST: MapsDBs/Edit/5
@@ -79,15 +79,15 @@ namespace MapApplication.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,AtractionName,Latitude,Longitude,City")] AtractionDb mapsDB)
+        public ActionResult Edit([Bind(Include = "ID,AtractionName,Latitude,Longitude,City")] AtractionDb atractionDb)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(mapsDB).State = EntityState.Modified;
+                db.Entry(atractionDb).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(mapsDB);
+            return View(atractionDb);
         }
 
         // GET: MapsDBs/Delete/5
@@ -97,12 +97,12 @@ namespace MapApplication.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            AtractionDb mapsDB = db.AtractionDb.Find(id);
-            if (mapsDB == null)
+            AtractionDb atractionDb = db.AtractionDb.Find(id);
+            if (atractionDb == null)
             {
                 return HttpNotFound();
             }
-            return View(mapsDB);
+            return View(atractionDb);
         }
 
         // POST: MapsDBs/Delete/5
@@ -110,8 +110,8 @@ namespace MapApplication.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            AtractionDb mapsDB = db.AtractionDb.Find(id);
-            db.AtractionDb.Remove(mapsDB);
+            AtractionDb atractionDb = db.AtractionDb.Find(id);
+            db.AtractionDb.Remove(atractionDb);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

@@ -10,7 +10,7 @@ namespace MapApplication.Controllers
 {
     public class HomeController : Controller
     {
-        private MapsDBContext1 db = new MapsDBContext1();
+        private MapContext db = new MapContext();
 
         public ActionResult Index()
         {

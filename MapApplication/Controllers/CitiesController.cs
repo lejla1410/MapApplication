@@ -12,7 +12,7 @@ namespace MapApplication.Controllers
 {
     public class CitiesController : Controller
     {
-        private MapsDBContext1 db = new MapsDBContext1();
+        private MapContext db = new MapContext();
 
         // GET: Cities
         public ActionResult Index()
