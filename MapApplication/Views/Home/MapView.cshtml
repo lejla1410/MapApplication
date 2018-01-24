@@ -1,9 +1,8 @@
 ﻿@model MapApplication.ViewModel.MapsViewModel
 @{
-    ViewBag.Title = "MapView";
+    ViewBag.Title = "MapProject";
 }
 
-<h2>MapView</h2>
 
 <style>
     #map {
@@ -17,10 +16,16 @@
         margin: 0;
         padding: 0;
     }
+    .infoDiv {
+        height: 200px;
+        width: 300px;
+        -webkit-user-select: none;
+        background-color: white;
+    }
 </style>
 <script src="https://maps.googleapis.com/maps/api/js?libraries=visualization"></script>
 <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCDHH4rDC2Fc6_qGViy6jx-_Cdn1HD7ABU&callback=initMap"></script>
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDUfJEC8CkEAhZWtaRy7wKauruffh4RkRw&callback=initMap"></script>
 <div id="map"></div>
 
 @section scripts {
@@ -29,12 +34,13 @@
 
             $(document).ready(function ()
             {
+                initMap();
+            });
 
-                //function initMap() {
+            function initMap() {
                 google.maps.visualRefresh = true;
                 var place = { lat: 54.452, lng: 18.768 };
                 var map = new google.maps.Map(document.getElementById('map'), {
-
                     zoom: 4,
                     mapTypeId: 'roadmap',
                     center: place,
@@ -266,7 +272,7 @@
                         'title': item.atractionName
                     });
                     var infowindow = new google.maps.InfoWindow({
-                        content: "<div class='infoDiv'><h2>" + item.Decription + "</div></div>"
+                        content: "<div class='infoDiv'><h2>" + item.decription + "</div></div>"
                     });
 
                     google.maps.event.addListener(marker, 'click', function () {

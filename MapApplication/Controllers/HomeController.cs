@@ -19,7 +19,7 @@ namespace MapApplication.Controllers
 
         public ActionResult MapView()
         {
-            //var markeryZbazdy = db.MapsDB.ToList().Where(m => m.City.Equals("Gdynia"));
+            //var markeryZbazdy = db.AtractionDb.ToList().Where(m => m.CityData).Equals("Id");
 
             var markery = new List<AtractionDb>
             {
