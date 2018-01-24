@@ -177,8 +177,19 @@
     <Compile Include="ViewModel\MapsViewNModel.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\images\KoziolkiPoznanskie.jpg" />
+    <Content Include="App_Data\images\mapLogo.jpg" />
+    <Content Include="App_Data\images\MoloWOrlowie.jpg" />
+    <Content Include="App_Data\images\MoloWSopocie.jpg" />
+    <Content Include="App_Data\images\MuzeumEmigracji.jpg" />
+    <Content Include="App_Data\images\MuzeumIIWojnySwiatowej.jpg" />
+    <Content Include="App_Data\images\PalacKulturyINauki.jpg" />
+    <Content Include="App_Data\images\PanoramaRaclawicka.jpg" />
+    <Content Include="App_Data\images\Sukiennice.jpg" />
+    <Content Include="App_Data\images\Zuraw.jpg" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Layout.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -223,9 +234,7 @@
     <Content Include="Views\MapsDBs\Edit.cshtml" />
     <Content Include="Views\MapsDBs\Index.cshtml" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
   </ItemGroup>

@@ -6,6 +6,9 @@
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    @Styles.Render("~/Content/Layout.css")
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -16,14 +19,28 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                <a href="@Url.Action("Index", "Home")">
+                    <img src="@Url.Content("~/App_Data/images/mapLogo.jpg")">
+                </a>
+
+                @* @Html.ActionLink("~.../App_Data/images/mapLogo.png", "Index", "Home",new { area = "" }, new { @class = "navbar-brand" })*@
             </div>
             <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                </ul>
+                <div class="topnav">
+                    <ul class="nav navbar-nav">
+                        <li>@Html.ActionLink("Dodaj własną atrakcję", "Create", "MapsDBs")</li>
+                        <li>@Html.ActionLink("Wyszukaj", "About", "Home")</li>
+                        <li>
+                            <div class="search-container">
+                                <form>
+                                    <input type="text" placeholder="Wpisz nazwę miasta.." name="search">
+                                    <button type="submit"><i class="fa fa-search"></i></button>
+                                </form>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
@@ -31,7 +48,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            <p>&copy; @DateTime.Now.Year - Katarzyna Nagel- projekt końcowy Software Development Academy </p>
         </footer>
     </div>
 
