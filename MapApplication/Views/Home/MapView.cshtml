@@ -265,7 +265,14 @@
                         'map': map,
                         'title': item.atractionName
                     });
-                });
+                    var infowindow = new google.maps.InfoWindow({
+                        content: "<div class='infoDiv'><h2>" + item.Decription + "</div></div>"
+                    });
+
+                    google.maps.event.addListener(marker, 'click', function () {
+                        infowindow.open(map, marker);
+                    });
+                })
             }
         </script>
     </section>

@@ -8,9 +8,9 @@ namespace MapApplication.ViewModel
 {
     public class MapsViewModel
     {
-        public IEnumerable<MapsDB> Markery { get; set; }
+        public IEnumerable<AtractionDb> Markery { get; set; }
 
-        public MapsViewModel(IEnumerable<MapsDB> markery)
+        public MapsViewModel(IEnumerable<AtractionDb> markery)
         {
             Markery = markery;
         }

@@ -18,7 +18,7 @@ namespace MapApplication.Controllers
         // GET: MapsDBs
         public ActionResult Index()
         {
-            return View(db.MapsDB.ToList());
+            return View(db.AtractionDb.ToList());
         }
 
         // GET: MapsDBs/Details/5
@@ -28,7 +28,7 @@ namespace MapApplication.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            MapsDB mapsDB = db.MapsDB.Find(id);
+            AtractionDb mapsDB = db.AtractionDb.Find(id);
             if (mapsDB == null)
             {
                 return HttpNotFound();
@@ -47,11 +47,11 @@ namespace MapApplication.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,AtractionName,Latitude,Longitude,City")] MapsDB mapsDB)
+        public ActionResult Create([Bind(Include = "ID,AtractionName,Latitude,Longitude,City")] AtractionDb mapsDB)
         {
             if (ModelState.IsValid)
             {
-                db.MapsDB.Add(mapsDB);
+                db.AtractionDb.Add(mapsDB);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
@@ -66,7 +66,7 @@ namespace MapApplication.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            MapsDB mapsDB = db.MapsDB.Find(id);
+            AtractionDb mapsDB = db.AtractionDb.Find(id);
             if (mapsDB == null)
             {
                 return HttpNotFound();
@@ -79,7 +79,7 @@ namespace MapApplication.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,AtractionName,Latitude,Longitude,City")] MapsDB mapsDB)
+        public ActionResult Edit([Bind(Include = "ID,AtractionName,Latitude,Longitude,City")] AtractionDb mapsDB)
         {
             if (ModelState.IsValid)
             {
@@ -97,7 +97,7 @@ namespace MapApplication.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            MapsDB mapsDB = db.MapsDB.Find(id);
+            AtractionDb mapsDB = db.AtractionDb.Find(id);
             if (mapsDB == null)
             {
                 return HttpNotFound();
@@ -110,8 +110,8 @@ namespace MapApplication.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            MapsDB mapsDB = db.MapsDB.Find(id);
-            db.MapsDB.Remove(mapsDB);
+            AtractionDb mapsDB = db.AtractionDb.Find(id);
+            db.AtractionDb.Remove(mapsDB);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

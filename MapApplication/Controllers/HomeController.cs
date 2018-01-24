@@ -19,11 +19,11 @@ namespace MapApplication.Controllers
 
         public ActionResult MapView()
         {
-            var markeryZbazdy = db.MapsDB.ToList().Where(m => m.City.Equals("Gdynia"));
+            //var markeryZbazdy = db.MapsDB.ToList().Where(m => m.City.Equals("Gdynia"));
 
-            var markery = new List<MapsDB>
+            var markery = new List<AtractionDb>
             {
-             new MapsDB()
+             new AtractionDb()
              {
                  AtractionName = "Muzeum Emigracji",
                  ID=8,

@@ -12,16 +12,16 @@ namespace MapApplication.Models
         {
         }
 
-        public virtual DbSet<MapsDB> MapsDB { get; set; }
+        public virtual DbSet<AtractionDb> AtractionDb  { get; set; }
         public virtual DbSet<City> City { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<MapsDB>()
+            modelBuilder.Entity<AtractionDb>()
                 .Property(e => e.AtractionName)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<MapsDB>()
+            modelBuilder.Entity<AtractionDb>()
                 .Property(e => e.City)
                 .IsUnicode(false);
         }

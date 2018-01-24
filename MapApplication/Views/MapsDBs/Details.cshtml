@@ -1,13 +1,12 @@
-﻿@model MapApplication.Models.MapsDB
+﻿@model MapApplication.Models.AtractionDb
 
 @{
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
+<h2>Szczegóły</h2>
 
 <div>
-    <h4>MapsDB</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
@@ -41,10 +40,16 @@
         <dd>
             @Html.DisplayFor(model => model.City)
         </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Decription)
+        </dt>
 
+        <dd>
+            @Html.DisplayFor(model => model.Decription)
+        </dd>
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Edytuj", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Wróć do mapy", "Index")
 </p>

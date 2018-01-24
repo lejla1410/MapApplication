@@ -7,8 +7,8 @@ using System.Web;
 
 namespace MapApplication.Models
 {
-    [Table("MapsDB")]
-    public partial class MapsDB
+    [Table("AtractionDB")]
+    public class AtractionDb
     {
         [Key]
         public int ID { get; set; }
@@ -20,6 +20,7 @@ namespace MapApplication.Models
 
         [StringLength(50)]
         public string City { get; set; }
+        public string Decription { get; set; }
         public string MyImagesFile { get; set; }
         public virtual City CityData { get; set; }
     }
