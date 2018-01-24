@@ -177,6 +177,7 @@
     <Compile Include="ViewModel\MapsViewNModel.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\mapp.png" />
     <Content Include="App_Data\images\KoziolkiPoznanskie.jpg" />
     <Content Include="App_Data\images\mapLogo.jpg" />
     <Content Include="App_Data\images\MoloWOrlowie.jpg" />
