@@ -20,6 +20,7 @@ namespace MapApplication.Models
 
         [StringLength(50)]
         public string City { get; set; }
+        [StringLength(150)]
         public string Decription { get; set; }
         public string MyImagesFile { get; set; }
         public virtual City CityData { get; set; }

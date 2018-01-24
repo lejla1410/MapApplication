@@ -47,7 +47,7 @@ namespace MapApplication.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,AtractionName,Latitude,Longitude,City")] AtractionDb atractionDb)
+        public ActionResult Create(AtractionDb atractionDb)
         {
             if (ModelState.IsValid)
             {
@@ -79,7 +79,7 @@ namespace MapApplication.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,AtractionName,Latitude,Longitude,City")] AtractionDb atractionDb)
+        public ActionResult Edit(AtractionDb atractionDb)
         {
             if (ModelState.IsValid)
             {

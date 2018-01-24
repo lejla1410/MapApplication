@@ -19,7 +19,7 @@ namespace MapApplication.Controllers
 
         public ActionResult MapView()
         {
-            //var markeryZbazdy = db.AtractionDb.ToList().Where(m => m.CityData).Equals("Id");
+            var markeryZbazdy = db.AtractionDb.ToList().Where(m => m.CityData.Equals("Id"));
 
             var markery = new List<AtractionDb>
             {
@@ -29,10 +29,13 @@ namespace MapApplication.Controllers
                  ID=8,
                  Latitude=54.5331021,
                  Longitude = 18.54793821,
-                 City = "Gdynia"
+                 City = "Gdynia",
+                 Decription="Muzeum historyczne w Gdyni, samorządowa instytucja kultury Gdyni,"+
+                 "założone w lutym 2012, udostępnione publiczności 16 maja 2015. Placówka dokumentuje historię emigracji Polaków.",
+                 MyImagesFile= "MuzeumEmigracji.jpg"
              }
             };
-
+           
             return View(new MapsViewModel(markery));
         }
 

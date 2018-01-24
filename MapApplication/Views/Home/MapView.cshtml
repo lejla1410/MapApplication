@@ -263,16 +263,21 @@
 
                 var markery = @JavaScriptConvert.SerializeObject(Model.Markery);
 
-                $.each(markery, function (i, item) {
-
-                    console.log(item);
+                $.each(markery, function (i, item)
+                {
                     var marker = new google.maps.Marker({
                         'position': new google.maps.LatLng(item.latitude, item.longitude),
                         'map': map,
-                        'title': item.atractionName
+                        'title': item.atractionName,
+                        'icon':[ item.MyImagesFile, {
+                            size: new google.maps.Size(48, 48),
+                            origin: new google.maps.Point(0, 0),
+                            anchor: new google.maps.Point(0, 32)
+                        }]
+
                     });
                     var infowindow = new google.maps.InfoWindow({
-                        content: "<div class='infoDiv'><h2>" + item.decription + "</div></div>"
+                        content: item.decription 
                     });
 
                     google.maps.event.addListener(marker, 'click', function () {

@@ -167,6 +167,11 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="JavaScriptConvert.cs" />
+    <Compile Include="Migrations\201801242159223_NewProperties.cs" />
+    <Compile Include="Migrations\201801242159223_NewProperties.Designer.cs">
+      <DependentUpon>201801242159223_NewProperties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\City.cs" />
     <Compile Include="Models\AtractionDb.cs" />
     <Compile Include="Models\MapContext.cs" />
@@ -244,6 +249,11 @@
   <ItemGroup>
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201801242159223_NewProperties.resx">
+      <DependentUpon>201801242159223_NewProperties.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
