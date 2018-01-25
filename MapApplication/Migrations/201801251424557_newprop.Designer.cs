@@ -7,13 +7,13 @@ namespace MapApplication.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class NewProperties : IMigrationMetadata
+    public sealed partial class newprop : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(NewProperties));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(newprop));
         
         string IMigrationMetadata.Id
         {
-            get { return "201801242159223_NewProperties"; }
+            get { return "201801251424557_newprop"; }
         }
         
         string IMigrationMetadata.Source

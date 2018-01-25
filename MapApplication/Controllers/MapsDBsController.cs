@@ -53,6 +53,7 @@ namespace MapApplication.Controllers
             {
                 db.AtractionDb.Add(atractionDb);
                 db.SaveChanges();
+                
                 return RedirectToAction("Index");
             }
 

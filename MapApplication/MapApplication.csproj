@@ -167,9 +167,9 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="JavaScriptConvert.cs" />
-    <Compile Include="Migrations\201801242159223_NewProperties.cs" />
-    <Compile Include="Migrations\201801242159223_NewProperties.Designer.cs">
-      <DependentUpon>201801242159223_NewProperties.cs</DependentUpon>
+    <Compile Include="Migrations\201801251424557_newprop.cs" />
+    <Compile Include="Migrations\201801251424557_newprop.Designer.cs">
+      <DependentUpon>201801251424557_newprop.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\City.cs" />
@@ -251,8 +251,8 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201801242159223_NewProperties.resx">
-      <DependentUpon>201801242159223_NewProperties.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201801251424557_newprop.resx">
+      <DependentUpon>201801251424557_newprop.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
