@@ -167,13 +167,13 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="JavaScriptConvert.cs" />
-    <Compile Include="Migrations\201801251424557_newprop.cs" />
-    <Compile Include="Migrations\201801251424557_newprop.Designer.cs">
-      <DependentUpon>201801251424557_newprop.cs</DependentUpon>
+    <Compile Include="Migrations\201801251845256_news.cs" />
+    <Compile Include="Migrations\201801251845256_news.Designer.cs">
+      <DependentUpon>201801251845256_news.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201801251515581_newCityprop.cs" />
-    <Compile Include="Migrations\201801251515581_newCityprop.Designer.cs">
-      <DependentUpon>201801251515581_newCityprop.cs</DependentUpon>
+    <Compile Include="Migrations\201801251847397_newstrings.cs" />
+    <Compile Include="Migrations\201801251847397_newstrings.Designer.cs">
+      <DependentUpon>201801251847397_newstrings.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\City.cs" />
@@ -255,11 +255,11 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201801251424557_newprop.resx">
-      <DependentUpon>201801251424557_newprop.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201801251845256_news.resx">
+      <DependentUpon>201801251845256_news.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201801251515581_newCityprop.resx">
-      <DependentUpon>201801251515581_newCityprop.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201801251847397_newstrings.resx">
+      <DependentUpon>201801251847397_newstrings.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
