@@ -171,6 +171,10 @@
     <Compile Include="Migrations\201801251424557_newprop.Designer.cs">
       <DependentUpon>201801251424557_newprop.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201801251515581_newCityprop.cs" />
+    <Compile Include="Migrations\201801251515581_newCityprop.Designer.cs">
+      <DependentUpon>201801251515581_newCityprop.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\City.cs" />
     <Compile Include="Models\AtractionDb.cs" />
@@ -253,6 +257,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201801251424557_newprop.resx">
       <DependentUpon>201801251424557_newprop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801251515581_newCityprop.resx">
+      <DependentUpon>201801251515581_newCityprop.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
