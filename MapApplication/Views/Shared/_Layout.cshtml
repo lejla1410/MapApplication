@@ -42,7 +42,7 @@
                         <li>@Html.ActionLink("Dodaj miasto", "Create", "Cities")</li>
                         <li>
                             <div class="search-container">
-                                <form action="/Home/MapView" method="post">
+                                <form action="/Home/MapView" method="get" data-ajax-target="#maplist" id="search-form">
                                     <input id="search-filter" type="text" placeholder="Wpisz nazwę miasta.." name="searchCityName"  data-autocomplete-source="@Url.Action("MapView")">
 
                                     <button type="submit"><i class="fa fa-search"></i></button>
@@ -78,7 +78,26 @@
                 };
                 $input.autocomplete(options);
             };
+            var ajaxSubmit = function () {
+                var $form = $(this);
+                var settings = {
+                    data: $(this).serialize(),
+                    url: $(this).attr("action"),
+                    type: $(this).attr("method")
+                };
+
+                $.ajax(settings).done(function (result) {
+                    var $targetElement= $($form.data("ajax-target"));
+                    var $newContent= $(result);
+                    $($targetElement).replaceWith($newContent);
+                    
+                });
+                return false;
+
+            }
+
             $("#search-filter").each(setupAutoComplete);
+            $("#search-form").submit(ajaxSubmit);
         });
     </script>
     @Scripts.Render("~/bundles/jquery")
