@@ -263,9 +263,11 @@
 
                 var markery = @JavaScriptConvert.SerializeObject(Model.Markery);
 
+
+         
                 $.each(markery, function (i, item)
                 {
-                    var image = {
+                    var imageOption = {
                         size: new google.maps.Size(48, 48),
                         origin: new google.maps.Point(0, 0),
                         anchor: new google.maps.Point(0, 32)
@@ -274,13 +276,7 @@
                         'position': new google.maps.LatLng(item.latitude, item.longitude),
                         'map': map,
                         'title': item.atractionName,
-                        'icon': {
-                            url: '@Url.Content("~/Content/images/")' +  item.myImagesFile,
-                            scaledSize: new google.maps.Size(50, 50), // scaled size
-                            origin: new google.maps.Point(0,0), // origin
-                            anchor: new google.maps.Point(0, 0) // anchor
-
-                        }
+                        'icon':item.MyImagesFile,image
                     });
                    
                     var infowindow = new google.maps.InfoWindow({
