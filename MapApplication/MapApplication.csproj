@@ -175,6 +175,10 @@
     <Compile Include="Migrations\201801251847397_newstrings.Designer.cs">
       <DependentUpon>201801251847397_newstrings.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201801261543099_newfeatures.cs" />
+    <Compile Include="Migrations\201801261543099_newfeatures.Designer.cs">
+      <DependentUpon>201801261543099_newfeatures.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\City.cs" />
     <Compile Include="Models\AtractionDb.cs" />
@@ -260,6 +264,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201801251847397_newstrings.resx">
       <DependentUpon>201801251847397_newstrings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801261543099_newfeatures.resx">
+      <DependentUpon>201801261543099_newfeatures.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
