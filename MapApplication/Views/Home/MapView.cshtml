@@ -12,7 +12,7 @@
 </style>
 <style>
     html, body {
-        height: 100%;
+        
         margin: 0;
         padding: 0;
     }
@@ -274,11 +274,17 @@
                         'position': new google.maps.LatLng(item.latitude, item.longitude),
                         'map': map,
                         'title': item.atractionName,
-                        'icon':item.MyImagesFile,image
+                        'icon': {
+                            url: '@Url.Content("~/Content/images/")' +  item.myImagesFile,
+                            scaledSize: new google.maps.Size(50, 50), // scaled size
+                            origin: new google.maps.Point(0,0), // origin
+                            anchor: new google.maps.Point(0, 0) // anchor
+
+                        }
                     });
                    
                     var infowindow = new google.maps.InfoWindow({
-                        content: item.decription 
+                        content: "<div class='infoDiv'><img src='@Url.Content("~/Content/images/")" + item.myImagesFile + "' height='150' width='*'><p>" + item.decription + "</p></div>" 
                     });
 
                     google.maps.event.addListener(marker, 'click', function () {

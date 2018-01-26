@@ -20,9 +20,9 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <p><a href="@Url.Action("MapView", "Home")">
-                    <img src="@Url.Content("~/MapApplication/App_Data/mapp.png")">
-                </a></p>
+                <a href="@Url.Action("MapView", "Home")" class="navbar-left">
+                    <img src="@Url.Content("~/Content/images/mapLogo.jpg")">
+                </a>
 
                 @*@Html.ActionLink("MapLogo", "Index", "Home",new { area = "" }, new { @class = "navbar-brand" })*@
             </div>
@@ -33,8 +33,8 @@
                         <li>@Html.ActionLink("Wyszukaj", "About", "Home")</li>
                         <li>
                             <div class="search-container">
-                                <form>
-                                    <input type="text" placeholder="Wpisz nazwę miasta.." name="search">
+                                <form action="/Home/MapView" method="post">
+                                    <input type="text" placeholder="Wpisz nazwę miasta.." name="searchCityName" id="cityName">
                                     <button type="submit"><i class="fa fa-search"></i></button>
                                 </form>
                             </div>

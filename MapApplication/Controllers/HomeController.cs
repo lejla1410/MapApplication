@@ -35,8 +35,16 @@ namespace MapApplication.Controllers
                  MyImagesFile= "MuzeumEmigracji.jpg"
              }
             };
-           
+
             return View(new MapsViewModel(markery));
+        }
+
+        [HttpPost]
+        public ActionResult MapView(string searchCityName)
+        {
+            var markeryZbazdy = db.AtractionDb.Where(m => m.City.Equals(searchCityName)).ToList();
+
+            return View(new MapsViewModel(markeryZbazdy));
         }
 
     }
