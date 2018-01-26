@@ -42,7 +42,7 @@ namespace MapApplication.Controllers
         [HttpPost]
         public ActionResult MapView(string searchCityName)
         {
-            var markeryZbazdy = db.AtractionDb.Where(m => m.City.Equals(searchCityName)).ToList();
+            var markeryZbazdy = db.AtractionDb.Where(m => m.City.ToLower().Equals(searchCityName)).ToList();
 
             return View(new MapsViewModel(markeryZbazdy));
         }

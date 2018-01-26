@@ -7,16 +7,16 @@
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
     @Styles.Render("~/Content/Layout.css")
-<style>
-    .topnav{
-        background-color:white;
-    }
-    .navbar-fixed-top,
-    .navbar-fixed-bottom {
-        position:page;
-            
-    }
-</style>
+    <style>
+        .topnav {
+            background-color: white;
+        }
+
+        .navbar-fixed-top,
+        .navbar-fixed-bottom {
+            position: page;
+        }
+    </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     @*<link rel="stylesheet" href="  https://bootswatch.com/4/spacelab/bootstrap.min.css">*@
 </head>
@@ -39,17 +39,16 @@
                 <div class="topnav">
                     <ul class="nav navbar-nav">
                         <li>@Html.ActionLink("Dodaj własną atrakcję", "Create", "MapsDBs")</li>
-                        <li>@Html.ActionLink("Wyszukaj", "About", "Home")</li>
+                        <li>@Html.ActionLink("Dodaj miasto", "Create", "Cities")</li>
                         <li>
                             <div class="search-container">
                                 <form action="/Home/MapView" method="post">
-                                    <input type="text" placeholder="Wpisz nazwę miasta.." name="searchCityName" id="cityName">
-                                    
+                                    <input id="search-filter" type="text" placeholder="Wpisz nazwę miasta.." name="searchCityName"  data-autocomplete-source="@Url.Action("MapView")">
+
                                     <button type="submit"><i class="fa fa-search"></i></button>
                                 </form>
                             </div>
                         </li>
-
                     </ul>
                 </div>
             </div>
@@ -58,12 +57,32 @@
     <div class="container body-content">
         @RenderBody()
         <hr />
+
         <footer>
             <p>&copy; @DateTime.Now.Year - Katarzyna Nagel- projekt końcowy dla Software Development Academy </p>
         </footer>
     </div>
 
+    <script>
+        $(function () {
+            var setupAutoComplete = function () {
+                var $input = $(this);
+                var options = {
+                    source: $input.attr("data-autocomplete-source"),
+                    select: function (event, ui) {
+                        $input = $(this);
+                        $input.val(ui.item.label);
+                        var $form = $input.parents("form:first");
+                        $form.submit();
+                    }
+                };
+                $input.autocomplete(options);
+            };
+            $("#search-filter").each(setupAutoComplete);
+        });
+    </script>
     @Scripts.Render("~/bundles/jquery")
+   
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
 </body>
