@@ -19,8 +19,7 @@ namespace MapApplication.Controllers
 
         public ActionResult MapView()
         {
-            var miasta = db.City.ToList();
-            var markeryZbazdy = db.AtractionDb.ToList();
+            var markeryZbazdy = db.AtractionDb.ToList().Where(m => m.CityData.Equals("Id"));
 
             var markery = new List<AtractionDb>
             {
@@ -28,16 +27,24 @@ namespace MapApplication.Controllers
              {
                  AtractionName = "Muzeum Emigracji",
                  ID=8,
-                 Latitude="54.5331021",
-                 Longitude = "18.54793821",
+                 Latitude=54.5331021,
+                 Longitude = 18.54793821,
                  City = "Gdynia",
                  Decription="Muzeum historyczne w Gdyni, samorządowa instytucja kultury Gdyni,"+
                  "założone w lutym 2012, udostępnione publiczności 16 maja 2015. Placówka dokumentuje historię emigracji Polaków.",
-                 MyImagesFile= "../App_Data/images/MuzeumEmigracji.jpg"
+                 MyImagesFile= "MuzeumEmigracji.jpg"
              }
             };
-           
+
             return View(new MapsViewModel(markery));
+        }
+
+        [HttpPost]
+        public ActionResult MapView(string searchCityName)
+        {
+            var markeryZbazdy = db.AtractionDb.Where(m => m.City.Equals(searchCityName)).ToList();
+
+            return View(new MapsViewModel(markeryZbazdy));
         }
 
     }

@@ -15,8 +15,8 @@ namespace MapApplication.Models
 
         [StringLength(50)]
         public string AtractionName { get; set; }
-        public string Latitude { get; set; }
-        public string Longitude { get; set; }
+        public double Latitude { get; set; }
+        public double Longitude { get; set; }
 
         [StringLength(50)]
         public string City { get; set; }
