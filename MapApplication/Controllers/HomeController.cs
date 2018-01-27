@@ -47,16 +47,13 @@ namespace MapApplication.Controllers
         public ActionResult MapView(string searchCityName)
         {
             var markeryZbazdy = db.AtractionDb.Where(m => m.City.ToLower().Equals(searchCityName)).ToList();
-
-            
-
             var miasto = db.City.First(c => c.Name.Equals(searchCityName));
 
-            var viewModelToReturn = new MapsViewModel(markeryZbazdy);
-            viewModelToReturn.LattToZoom = miasto.CityLatitude;
-            viewModelToReturn.LongToZoom = miasto.CityLongitude;
+            var ModelToReturn = new MapsViewModel(markeryZbazdy);
+            ModelToReturn.LattToZoom = miasto.CityLatitude;
+            ModelToReturn.LongToZoom = miasto.CityLongitude;
 
-            return View(viewModelToReturn);
+            return View(ModelToReturn);
         }
 
     }

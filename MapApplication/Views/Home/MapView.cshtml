@@ -23,6 +23,9 @@
         -webkit-user-select: none;
         background-color: white;
     }
+    marker {
+        border-radius: 50%;
+    }
 </style>
 <script src="https://maps.googleapis.com/maps/api/js?libraries=visualization"></script>
 <script async defer
@@ -32,7 +35,7 @@
 @section scripts {
     <section class="scripts">
         <script type="text/javascript">
-
+          
             $(document).ready(function ()
             {
                 initMap();
