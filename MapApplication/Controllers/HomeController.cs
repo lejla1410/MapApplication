@@ -34,7 +34,7 @@ namespace MapApplication.Controllers
                  "założone w lutym 2012, udostępnione publiczności 16 maja 2015. Placówka dokumentuje historię emigracji Polaków.",
                  MyImagesFile= "MuzeumEmigracji.jpg"
              }
-            };
+        };
 
             return View(new MapsViewModel(markery));
         }

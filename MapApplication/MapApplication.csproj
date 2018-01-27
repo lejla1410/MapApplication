@@ -170,21 +170,9 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="JavaScriptConvert.cs" />
-    <Compile Include="Migrations\201801251845256_news.cs" />
-    <Compile Include="Migrations\201801251845256_news.Designer.cs">
-      <DependentUpon>201801251845256_news.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201801251847397_newstrings.cs" />
-    <Compile Include="Migrations\201801251847397_newstrings.Designer.cs">
-      <DependentUpon>201801251847397_newstrings.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201801261543099_newfeatures.cs" />
-    <Compile Include="Migrations\201801261543099_newfeatures.Designer.cs">
-      <DependentUpon>201801261543099_newfeatures.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201801261604094_newfeatures1.cs" />
-    <Compile Include="Migrations\201801261604094_newfeatures1.Designer.cs">
-      <DependentUpon>201801261604094_newfeatures1.cs</DependentUpon>
+    <Compile Include="Migrations\201801270927189_repairDb.cs" />
+    <Compile Include="Migrations\201801270927189_repairDb.Designer.cs">
+      <DependentUpon>201801270927189_repairDb.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\City.cs" />
@@ -272,7 +260,9 @@
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -309,21 +299,12 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201801251845256_news.resx">
-      <DependentUpon>201801251845256_news.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201801251847397_newstrings.resx">
-      <DependentUpon>201801251847397_newstrings.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201801261543099_newfeatures.resx">
-      <DependentUpon>201801261543099_newfeatures.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201801261604094_newfeatures1.resx">
-      <DependentUpon>201801261604094_newfeatures1.cs</DependentUpon>
-    </EmbeddedResource>
+    <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
+    <EmbeddedResource Include="Migrations\201801270927189_repairDb.resx">
+      <DependentUpon>201801270927189_repairDb.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

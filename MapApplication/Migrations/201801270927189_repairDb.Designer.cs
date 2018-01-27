@@ -7,13 +7,13 @@ namespace MapApplication.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class newstrings : IMigrationMetadata
+    public sealed partial class repairDb : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(newstrings));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(repairDb));
         
         string IMigrationMetadata.Id
         {
-            get { return "201801251847397_newstrings"; }
+            get { return "201801270927189_repairDb"; }
         }
         
         string IMigrationMetadata.Source
