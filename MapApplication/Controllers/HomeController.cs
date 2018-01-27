@@ -39,7 +39,6 @@ namespace MapApplication.Controllers
             var viewModelToReturn = new MapsViewModel(markery);
             viewModelToReturn.LattToZoom = 54.5331021;
             viewModelToReturn.LongToZoom = 18.54793821;
-
             return View(viewModelToReturn);
         }
 
@@ -48,7 +47,6 @@ namespace MapApplication.Controllers
         {
             var markeryZbazdy = db.AtractionDb.Where(m => m.City.ToLower().Equals(searchCityName)).ToList();
             var miasto = db.City.First(c => c.Name.Equals(searchCityName));
-
             var ModelToReturn = new MapsViewModel(markeryZbazdy);
             ModelToReturn.LattToZoom = miasto.CityLatitude;
             ModelToReturn.LongToZoom = miasto.CityLongitude;
