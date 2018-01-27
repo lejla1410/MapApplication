@@ -40,9 +40,9 @@
 
             function initMap() {
                 google.maps.visualRefresh = true;
-                var place = { lat: 54.452, lng: 18.768 };
+                var place = { lat: @Model.LattToZoom.ToString().Replace(",","."), lng: @Model.LongToZoom.ToString().Replace(",", ".") };
                 var map = new google.maps.Map(document.getElementById('map'), {
-                    zoom: 4,
+                    zoom: 12,
                     mapTypeId: 'roadmap',
                     center: place,
                     styles: [
@@ -286,14 +286,14 @@
 
                     var infowindow = new google.maps.InfoWindow({
                         content: "<div class='infoDiv'><img src='@Url.Content("~/Content/images/")" + item.myImagesFile + "' height='150' width='*'><p>" + item.decription + "</p></div>"
-                    });
+                                            });
 
                     google.maps.event.addListener(marker, 'click', function () {
                         infowindow.open(map, marker);
                     });
                 })
             }
-           
+
         </script>
     </section>
 } 

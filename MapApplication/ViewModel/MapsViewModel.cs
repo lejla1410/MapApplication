@@ -10,7 +10,11 @@ namespace MapApplication.ViewModel
     {
         public IEnumerable<AtractionDb> Markery { get; set; }
 
-        public MapsViewModel(IEnumerable<AtractionDb> markery)
+        public double LattToZoom { get; set; }
+
+        public double LongToZoom { get; set; }
+
+        public MapsViewModel( IEnumerable<AtractionDb> markery)
         {
             Markery = markery;
         }

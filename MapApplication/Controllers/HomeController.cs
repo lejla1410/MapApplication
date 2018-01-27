@@ -23,20 +23,24 @@ namespace MapApplication.Controllers
 
             var markery = new List<AtractionDb>
             {
-             new AtractionDb()
-             {
-                 AtractionName = "Muzeum Emigracji",
-                 ID=8,
-                 Latitude=54.5331021,
-                 Longitude = 18.54793821,
-                 City = "Gdynia",
-                 Decription="Muzeum historyczne w Gdyni, samorządowa instytucja kultury Gdyni,"+
-                 "założone w lutym 2012, udostępnione publiczności 16 maja 2015. Placówka dokumentuje historię emigracji Polaków.",
-                 MyImagesFile= "MuzeumEmigracji.jpg"
-             }
-        };
+                 new AtractionDb()
+                 {
+                     AtractionName = "Muzeum Emigracji",
+                     ID=8,
+                     Latitude=54.5331021,
+                     Longitude = 18.54793821,
+                     City = "Gdynia",
+                     Decription="Muzeum historyczne w Gdyni, samorządowa instytucja kultury Gdyni,"+
+                     "założone w lutym 2012, udostępnione publiczności 16 maja 2015. Placówka dokumentuje historię emigracji Polaków.",
+                     MyImagesFile= "MuzeumEmigracji.jpg"
+                 }
+            };
 
-            return View(new MapsViewModel(markery));
+            var viewModelToReturn = new MapsViewModel(markery);
+            viewModelToReturn.LattToZoom = 54.5331021;
+            viewModelToReturn.LongToZoom = 18.54793821;
+
+            return View(viewModelToReturn);
         }
 
         [HttpPost]
@@ -44,7 +48,15 @@ namespace MapApplication.Controllers
         {
             var markeryZbazdy = db.AtractionDb.Where(m => m.City.ToLower().Equals(searchCityName)).ToList();
 
-            return View(new MapsViewModel(markeryZbazdy));
+            
+
+            var miasto = db.City.First(c => c.Name.Equals(searchCityName));
+
+            var viewModelToReturn = new MapsViewModel(markeryZbazdy);
+            viewModelToReturn.LattToZoom = miasto.CityLatitude;
+            viewModelToReturn.LongToZoom = miasto.CityLongitude;
+
+            return View(viewModelToReturn);
         }
 
     }
