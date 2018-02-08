@@ -184,7 +184,6 @@
   <ItemGroup>
     <Content Include="Content\images\KoziolkiPoznanskie.jpg" />
     <Content Include="Content\images\logotype.jpg" />
-    <Content Include="Content\images\mapa_rysunkowa.jpg" />
     <Content Include="Content\images\MoloWOrlowie.jpg" />
     <Content Include="Content\images\MoloWSopocie.jpg" />
     <Content Include="Content\images\MuzeumEmigracji.jpg" />
@@ -196,7 +195,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Layout.css" />
-    <Content Include="Content\Polandisbeautiful.mp4" />
+    <Content Include="Content\images\panorama.jpg" />
     <Content Include="Content\themes\base\accordion.css" />
     <Content Include="Content\themes\base\all.css" />
     <Content Include="Content\themes\base\autocomplete.css" />

@@ -1,4 +1,8 @@
-﻿@{ 
+﻿
+
+
+
+@{
     Layout = null;
 }
 
@@ -8,20 +12,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
         .container {
-            position: relative;
-            width: 50%;
+            position: center;
+            height: 50%;
         }
 
-        .image {
-            opacity: 1;
-            display: block;
-            width: 100%;
-            height: auto;
-            transition: .5s ease;
-            backface-visibility: hidden;
-        }
-
-        .middle {
+       .middle {
             transition: .5s ease;
             opacity: 0;
             position: absolute;
@@ -32,34 +27,48 @@
             text-align: center;
         }
 
-        .container:hover .image {
-            opacity: 0.3;
-        }
-
+   
         .container:hover .middle {
-            opacity: 1;
+            opacity: 10;
         }
-
-        .text {
-            background-color: #4CAF50;
+     .text {
+            background-color: rgba(167, 160, 160, 0.74);
             color: white;
-            font-size: 16px;
-            padding: 16px 32px;
+            font-size: 25px;
+            padding: 6px 6px;
         }
+     #search-filter{
+         width:400px;
+         height:40px;
+     }
+     .buton{
+         width:88px;
+         height: 55px;
+         font-size: 16px;
+         font-weight:bold;
+         color:rebeccapurple;
+     }
+         
     </style>
 </head>
 <body>
-
+    <div class="logo">
+        <a href="@Url.Action("MapView", "Home")" class="navbar-left">
+            <img src="@Url.Content("~/Content/images/logotype.jpg")">
+        </a>
+    </div>
     <div class="container">
-        <img src="~/Content/images/mapa_rysunkowa.jpg" alt="Avatar" class="image" style="width:100%">
+        <img src="~/Content/images/panorama.jpg" alt="Avatar" class="image" style="width:100%">
         <div class="middle">
-            <div class="text"><div class="search-container">
-    <form action="/Home/MapView" method="get" data-ajax-target="#map" id="search-form">
-        <input id="search-filter" type="text" placeholder="Wpisz nazwę miasta.." name="searchCityName" data-autocomplete-source="@Url.Action("MapView")">
-
-        <button type="submit"><i class="fa fa-search"></i></button>
-    </form>
-</div></div>
+            <div class="text">
+                <text> Wpisz miasto, które chcesz zwiedzić:</text>
+                <div class="search-container">
+                    <form action="/Home/MapView" method="get" data-ajax-target="#map" id="search-form">
+                        <input id="search-filter" type="text"  name="searchCityName" data-autocomplete-source="@Url.Action("MapView")">
+                        <button type="submit" class="buton"><i class="fa fa-search"> Szukaj</i></button>
+                    </form>
+                </div>
+            </div>
         </div>
     </div>
 
