@@ -1,7 +1,4 @@
 ﻿
-
-
-
 @{
     Layout = null;
 }
@@ -37,7 +34,7 @@
             font-size: 25px;
             padding: 6px 6px;
         }
-     #search-filter{
+     #cityName{
          width:400px;
          height:40px;
      }
@@ -63,8 +60,8 @@
             <div class="text">
                 <text> Wpisz miasto, które chcesz zwiedzić:</text>
                 <div class="search-container">
-                    <form action="/Home/MapView" method="get" data-ajax-target="#map" id="search-form">
-                        <input id="search-filter" type="text"  name="searchCityName" data-autocomplete-source="@Url.Action("MapView")">
+                    <form action="/Home/MapView" method="post">
+                        <input type="text"  name="searchCityName" id="cityName">
                         <button type="submit" class="buton"><i class="fa fa-search"> Szukaj</i></button>
                     </form>
                 </div>

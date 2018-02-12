@@ -50,6 +50,7 @@ namespace MapApplication.Controllers
         {
             if (ModelState.IsValid)
             {
+                var MiastaDodane = db.City.ToList().Where(c=>c.Name.Equals("Id"));
                 db.City.Add(city);
                 db.SaveChanges();
                 return RedirectToAction("Index");
