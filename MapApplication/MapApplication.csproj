@@ -178,6 +178,10 @@
     <Compile Include="Migrations\201802141513575_newlength.Designer.cs">
       <DependentUpon>201802141513575_newlength.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201802142317598_required.cs" />
+    <Compile Include="Migrations\201802142317598_required.Designer.cs">
+      <DependentUpon>201802142317598_required.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\City.cs" />
     <Compile Include="Models\AtractionDb.cs" />
@@ -319,6 +323,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201802141513575_newlength.resx">
       <DependentUpon>201802141513575_newlength.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802142317598_required.resx">
+      <DependentUpon>201802142317598_required.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

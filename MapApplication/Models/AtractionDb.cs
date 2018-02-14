@@ -24,6 +24,7 @@ namespace MapApplication.Models
         [DisplayName("Nazwa miasta")]
         public string City { get; set; }
         [StringLength(450)]
+        [Required]
         [DisplayName("Opis atrakcji")]
         public string Decription { get; set; }
         [DisplayName("Zdjęcie atrakcji")]
