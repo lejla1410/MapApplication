@@ -21,12 +21,14 @@
     }
 
     .infoDiv {
-        height:auto;
-        width: 200px;
+        height: auto;
+        width: 220px;
         -webkit-user-select: none;
         background-color: #f5f4f4;
-        font-family:Arial;
-        font-weight:bold;
+        font-family: Arial;
+        font-weight: bold;
+        padding: 0;
+        margin: 0;
     }
 
     markery {
@@ -302,6 +304,9 @@
                                 anchor: new google.maps.Point(0, 0),
                             }
                         });
+                        var infowindow = new google.maps.InfoWindow({
+                            content: "<div class='infoDiv'><img src='@Url.Content("~/Content/images/")" + item.myImagesFile + "' height='150' width='*'><p>" + item.decription + "</p></div>"
+                        });
                     }
                     else {
                         var marker = new google.maps.Marker({
@@ -310,17 +315,17 @@
                             'title': item.atractionName,
                             'icon':
                             {
+                                url: '@Url.Content("~/Content/images/")' + item.myImagesFile,
                                 scaledSize: new google.maps.Size(50, 50), // scaled size
                                 origin: new google.maps.Point(0, 0), // origin
                                 anchor: new google.maps.Point(0, 0),
                                 path: google.maps.SymbolPath.CIRCLE,
                             }
                         });
-
-                    };
-                    var infowindow = new google.maps.InfoWindow({
-                        content:  "<div class='infoDiv'><img src='@Url.Content("~/Content/images/")" + item.myImagesFile + "' height='150' width='*'><p>" + item.decription + "</p></div>"
-                    });
+                        var infowindow = new google.maps.InfoWindow({
+                            content: "<div class ='infoDiv'><h2>" + item.atractionName+ "</h2> </br><p>"+ item.decription + "</p></div>"
+                        });
+                    }
 
                     google.maps.event.addListener(marker, 'click', function () {
                         infowindow.open(map, marker);
