@@ -174,6 +174,10 @@
     <Compile Include="Migrations\201801270927189_repairDb.Designer.cs">
       <DependentUpon>201801270927189_repairDb.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201802141513575_newlength.cs" />
+    <Compile Include="Migrations\201802141513575_newlength.Designer.cs">
+      <DependentUpon>201802141513575_newlength.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\City.cs" />
     <Compile Include="Models\AtractionDb.cs" />
@@ -182,15 +186,22 @@
     <Compile Include="ViewModel\MapsViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\images\Akwarium.jpg" />
+    <Content Include="Content\images\Aqua.jpg" />
+    <Content Include="Content\images\ECS.jpg" />
     <Content Include="Content\images\KoziolkiPoznanskie.jpg" />
+    <Content Include="Content\images\Krzywy.jpg" />
     <Content Include="Content\images\logotype.jpg" />
+    <Content Include="Content\images\MoloBrzezno.jpg" />
     <Content Include="Content\images\MoloWOrlowie.jpg" />
     <Content Include="Content\images\MoloWSopocie.jpg" />
     <Content Include="Content\images\MuzeumEmigracji.jpg" />
     <Content Include="Content\images\MuzeumIIWojnySwiatowej.jpg" />
     <Content Include="Content\images\PalacKulturyINauki.jpg" />
     <Content Include="Content\images\PanoramaRaclawicka.jpg" />
+    <Content Include="Content\images\Scena.jpg" />
     <Content Include="Content\images\Sukiennice.jpg" />
+    <Content Include="Content\images\Westerplatte.jpg" />
     <Content Include="Content\images\Zuraw.jpg" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
@@ -305,6 +316,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201801270927189_repairDb.resx">
       <DependentUpon>201801270927189_repairDb.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802141513575_newlength.resx">
+      <DependentUpon>201802141513575_newlength.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -20,11 +20,10 @@ namespace MapApplication.Models
         public double Latitude { get; set; }
         [DisplayName("Długość geograficzna")]
         public double Longitude { get; set; }
-
         [StringLength(50)]
         [DisplayName("Nazwa miasta")]
         public string City { get; set; }
-        [StringLength(150)]
+        [StringLength(450)]
         [DisplayName("Opis atrakcji")]
         public string Decription { get; set; }
         [DisplayName("Zdjęcie atrakcji")]
