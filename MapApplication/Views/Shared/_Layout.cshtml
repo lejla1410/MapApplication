@@ -7,44 +7,10 @@
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
     @Styles.Render("~/Content/Layout.css")
+    @Styles.Render("~/Content/Site.css")
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <style>
-        body {
-            margin: 0px;
-            padding-top: 0px;
-            padding-bottom: 0px;
-            background-color: #e4e0e0;
-        }
-
-        .body-content {
-            padding-left: 0px;
-            padding-right: 0px;
-            margin-left: 10px;
-        }
-            .header {
-            overflow: hidden;
-            background-color: white;
-            padding: 5px 5px;
-        }
-
-            .header li {
-                float: left;
-                text-align: center;
-                padding: 5px;
-                text-decoration: double;
-                font-size: 15px;
-                line-height: 12px;
-            }
-
-        .search-container {
-            float: right;
-            color: #e63d39;
-            text-align: center;
-            padding: 10px;
-            text-decoration: none;
-            font-size: 15px;
-            line-height: 22px;
-        }
+      
         
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -70,47 +36,7 @@
             </ul>
         </div>
     </div>
-    @*<div class="navbar navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a href="@Url.Action("MapView", "Home")" class="navbar-left">
-                    <img src="@Url.Content("~/Content/images/logotype.jpg")">
-                </a>*@
-
-    @*@Html.ActionLink("MapLogo", "Index", "Home",new { area = "" }, new { @class = "navbar-brand" })*@
-    @*</div>
-        <div class="navbar-collapse collapse">
-            <div class="topnav">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Dodaj własną atrakcję", "Create", "MapsDBs")</li>
-                    <li>@Html.ActionLink("Dodaj miasto", "Create", "Cities")</li>
-                    <li>
-                        <div class="search-container">
-                            <form action="/Home/MapView" method="post">
-                                <input type="text" placeholder="Wpisz nazwę miasta.." name="searchCityName" id="cityName">
-                                <button type="submit"><i class="fa fa-search"></i></button>
-                            </form>
-                        </div>
-                    </li>
-                    <li>*@
-    @*<div class="search-container">
-            <form action="/Home/MapView" method="get" data-ajax-target="#map" id="search-form">
-                <input id="search-filter" type="text" placeholder="Wpisz nazwę miasta.." name="searchCityName" data-autocomplete-source="@Url.Action("MapView")">
-
-                <button type="submit"><i class="fa fa-search"></i></button>
-            </form>
-        </div>*@
-    @*</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>*@
+   
     <div class="container body-content">
         @RenderBody()
         <hr />
@@ -120,7 +46,7 @@
         </footer>
     </div>
 
-    <script>
+    @*<script>
         $(function () {
             var setupAutoComplete = function () {
                 var $input = $(this);
@@ -155,7 +81,7 @@
 
             $("#search-filter").each(setupAutoComplete);
             $("#search-form").submit(ajaxSubmit);
-        });
+        });*@
     </script>
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")

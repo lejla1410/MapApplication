@@ -26,3 +26,64 @@ textarea {
 .navbar-left img {
     height: 50px;
 }
+#map {
+    height: 700px;
+    width: 1700px;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #e4e0e0;
+}
+
+.infoDiv {
+    height: auto;
+    width: 220px;
+    -webkit-user-select: none;
+    background-color: #f5f4f4;
+    font-family: Arial;
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+}
+body {
+    margin: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    background-color: #e4e0e0;
+}
+
+.body-content {
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-left: 10px;
+}
+
+.header {
+    overflow: hidden;
+    background-color: white;
+    padding: 5px 5px;
+}
+
+    .header li {
+        float: left;
+        text-align: center;
+        padding: 5px;
+        text-decoration: double;
+        font-size: 15px;
+        line-height: 12px;
+    }
+
+.search-container {
+    float: right;
+    color: #e63d39;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 15px;
+    line-height: 22px;
+}

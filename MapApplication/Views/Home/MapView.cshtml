@@ -2,51 +2,9 @@
 @{
     ViewBag.Title = "MapProject";
 }
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-
-<style>
-    #map {
-        height: 700px;
-        width: 1700px;
-        margin: 0;
-        padding: 0;
-    }
-</style>
-<style>
-    html, body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-        background-color: #e4e0e0;
-    }
-
-    .infoDiv {
-        height: auto;
-        width: 220px;
-        -webkit-user-select: none;
-        background-color: #f5f4f4;
-        font-family: Arial;
-        font-weight: bold;
-        padding: 0;
-        margin: 0;
-    }
-
-    markery {
-        border-radius: 16px;
-        border: 1px solid #000 !important;
-    }
-</style>
-
 <script src="https://maps.googleapis.com/maps/api/js?libraries=visualization"></script>
 <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDUfJEC8CkEAhZWtaRy7wKauruffh4RkRw&callback=initMap"></script>
-
-@*<div class="w3-sidebar w3-light-grey w3-bar-block grid-item" style="width:25%">
-        <h3 class="w3-bar-item ">Menu</h3>
-        <a href="#" class="w3-bar-item w3-button">Link 1</a>
-        <a href="#" class="w3-bar-item w3-button">Link 2</a>
-        <a href="#" class="w3-bar-item w3-button">Link 3</a>
-    </div>*@
 <div id="map"></div>
 
 
