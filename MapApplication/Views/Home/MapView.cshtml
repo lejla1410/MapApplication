@@ -263,7 +263,7 @@
                             }
                         });
                         var infowindow = new google.maps.InfoWindow({
-                            content: "<div class='infoDiv'><img src='@Url.Content("~/Content/images/")" + item.myImagesFile + "' height='150' width='*'><p>" + item.decription + "</p></div>"
+                            content: "<div class='infoDiv'><img src='@Url.Content("~/Content/images/")" + item.myImagesFile + "' height='120' width='*'><h3>" +item.atractionName+ "</h3><p>" + item.decription + "</p></div>"
                         });
                     }
                     else {
@@ -281,15 +281,25 @@
                             }
                         });
                         var infowindow = new google.maps.InfoWindow({
-                            content: "<div class ='infoDiv'><h2>" + item.atractionName+ "</h2> </br><p>"+ item.decription + "</p></div>"
+                            content: "<div class ='infoDiv'><h3>" + item.atractionName+ "</h3> </br><p>"+ item.decription + "</p></div>"
                         });
                     }
 
+                    //google.maps.event.addListener(marker, 'click', function () {
+                    //    infowindow.open(map, marker);
+                    //});
                     google.maps.event.addListener(marker, 'click', function () {
-                        infowindow.open(map, marker);
+                        if (!marker.open) {
+                            infowindow.open(map, marker);
+                            marker.open = true;
+                        }
+                        else {
+                            infowindow.close();
+                            marker.open = false;
+                        }
                     });
-
                 })
+
              }
 
         </script>
